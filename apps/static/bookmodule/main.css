@@ -1,0 +1,54 @@
+/* Basic styling for tables */
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+}
+
+.simple-table th, .simple-table td,
+.complex-table th, .complex-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.simple-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.complex-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    text-align: center;
+}
+
+.complex-table .image-cell {
+    text-align: center;
+    vertical-align: middle;
+    padding: 10px;
+}
+
+.complex-table .header-cell {
+    text-align: center;
+    font-weight: bold;
+    background-color: #f2f2f2;
+    padding: 10px;
+}
+
+.simple-table tr:nth-child(even),
+.complex-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.simple-table tr:hover,
+.complex-table tr:hover {
+    background-color: #e2e2e2;
+}
+
+.complex-table td strong {
+    font-weight: bold;
+    text-align: left;
+    padding-left: 10px;
+}

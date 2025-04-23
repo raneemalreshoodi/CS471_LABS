@@ -1,0 +1,10 @@
+*.log
+*.pot
+*.pyc
+__pycache__
+*.bak
+*.py[cod]
+*.class
+.env
+.venv
+db.sqlite3

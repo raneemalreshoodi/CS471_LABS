@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Expensive Books</title>
+</head>
+<body>
+    <h1>Books with price greater than 20.0:</h1>
+    {% for book in books %}
+        <p>ID: {{ book.id }}, Title: {{ book.title }}, Price: {{ book.price }}</p>
+        <hr>
+    {% endfor %}
+</body>
+</html>
