@@ -57,6 +57,8 @@ TEMPLATE_DIR = os.path.join(BASE_DIR, "apps" + os.sep + "templates")
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [],
+        'APP_DIRS': True,
         'DIRS': [os.path.join(BASE_DIR, "apps/templates")], # Specify the template directory
         'APP_DIRS': True,        # Keep this True so Django can find templates in apps
         'OPTIONS': {
@@ -113,6 +115,11 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
+
+import os
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
 # Static files (CSS, JavaScript, Images)

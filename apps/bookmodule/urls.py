@@ -26,8 +26,19 @@ urlpatterns = [
     path('lab9_part1/addbook/', views.add_book, name='add_book1'),
     path('lab9_part1/editbook/<int:id>/', views.edit_book, name='edit_book1'),
     path('lab9_part1/deletebook/<int:id>/', views.delete_book, name='delete_book'),
-    path('lab9_part2/listbooks2/', views.list_books2, name='list_books2'),
     path('lab9_part2/addbookforms/', views.add_bookforms, name='add_book2'),
     path('lab9_part2/editbookforms/<int:id>/', views.edit_bookforms, name='edit_book2'),
+      path('list/', views.list_students, name='list_students'),
+    path('add/', views.add_student, name='add_student'),
+    path('edit/<int:id>/', views.edit_student, name='edit_student'),
+    path('delete/<int:student_id>/', views.delete_student, name='delete_student'),
+    path('add_address/', views.add_address, name='add_address'),
+    path('list2/', views.list_students2, name='list_students2'),
+    path('add2/', views.add_student2, name='add_student2'),
+    path('edit2/<int:id>/', views.edit_student2, name='edit_student2'),
+    path('delete2/<int:student_id>/', views.delete_student2, name='delete_student2'),
+    path('add_address2/', views.add_address2, name='add_address2'),
+    path('gallery/', views.gallery_list, name='gallery_list'),  # <-- this line
+    path('gallery/add/', views.add_gallery, name='add_gallery'),
 
 ]
