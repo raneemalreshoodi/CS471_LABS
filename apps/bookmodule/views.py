@@ -9,7 +9,12 @@ from .models import Student, Student2
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Student
 from .forms import Student2Form,Address2Form
+from django.shortcuts import render
+from django.contrib.auth.decorators import login_required
 
+@login_required
+def dashboard_view(request):
+    return render(request, 'dashboard.html')
 
 def list_students(request):
     students = Student.objects.all()

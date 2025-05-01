@@ -10,6 +10,10 @@ urlpatterns = [
     path('', apps.bookmodule.views.index),
     path('index2/<int:val1>/', apps.bookmodule.views.index2),
     path('users/', include("apps.usermodule.urls")),
+    # path('', include('apps.usermodule.urls')),
+    path('usermodule/', include('apps.usermodule.urls', namespace='usermodule')),
+
 ] 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+LOGIN_URL = '/usermodule/login'

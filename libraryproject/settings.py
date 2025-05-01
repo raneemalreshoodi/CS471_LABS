@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'apps.bookmodule',
     'apps.usermodule',
+
+
 ]
 
 MIDDLEWARE = [
@@ -49,7 +51,13 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.contrib.messages.middleware.MessageMiddleware',  # ✅ CORRECT
+
 ]
+
+LOGIN_URL = '/usermodule/login'
+LOGIN_REDIRECT_URL = '/usermodule/dashboard'
+
 
 ROOT_URLCONF = 'libraryproject.urls'
 TEMPLATE_DIR = os.path.join(BASE_DIR, "apps" + os.sep + "templates")
